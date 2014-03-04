@@ -1,0 +1,14 @@
+{
+    "title": "Sword Art Online",
+    "creator": "Reki Kawahara",
+    "studio": "A-1 Pictures",
+    "demographic": "Shonen",
+    "genre": "Adventure",
+    "seasons": [
+        {"startYear": "2012", "endYear": "2012", "episodeCount": "25"},
+        {"startYear": "2014", "endYear": "", "episodeCount": ""}
+    ],
+    "totalEpisodeCount": "25",
+    "setting": "scifi",
+    "medium": "Light Novel"
+}

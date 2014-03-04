@@ -4,7 +4,16 @@
 		{
 			"file_exclude_patterns":
 			[
-				"Anime Collection.sublime-project"
+				"Anime Collection.sublime-project",
+				".gitattributes",
+				".gitignore",
+				"config.rb",
+				"sass/print.scss",
+				"stylesheets/print.css"
+			],
+			"folder_exclude_patterns":
+			[
+				".sass-cache"
 			],
 			"follow_symlinks": true,
 			"path": "C:\\Users\\Nick\\Dropbox\\Personal\\Projects\\AnimeCollection"

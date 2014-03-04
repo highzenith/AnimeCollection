@@ -1,45 +1,194 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* --------------------------------- */
+/* --------->>> GLOBAL <<<---------- */
+/* --------------------------------- */
+@import "../Webfonts/museosans_500_macroman/stylesheet.css";
+@import "reset.css";
 
-@import "compass/reset";
+// Color Scheme: http://colorschemedesigner.com/#0741Tw0w0w0w0
+
+$animeOrange: #FF8300;
+$mangaBlue: #06799F;
+$novelRed: #FF2800;
+$gameGreen: #00BB3F;
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 
 body {
-    height: 100%;
-    width: 100%;
-    float: left;
+    font: normal 100% "museo_sans500", sans-serif;
 }
 
-nav, section {
+html {
+    background: #fff;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 12px;
+}
+
+
+/* --------------------------------- */
+/* --------->>> HEADER <<<---------- */
+/* --------------------------------- */
+header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 1px 2px transparentize(#000, 0.8);
+    h1 {
+        padding: 12px;
+        color: #222;
+    }
+}
+
+
+/* --------------------------------- */
+/* ---------->>> MAIN <<<----------- */
+/* --------------------------------- */
+#content {
+    min-height: 100%;
+    position: relative;
+    &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 20px #f00;
+    }
+}
+
+#main {
     display: block;
-    float: left;
+    margin: 72px auto 0 auto;
+    width: 96%;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow:
+        1px 1px 1px transparentize(#000, 0.8),
+        1px -1px 1px transparentize(#000, 0.8),
+        -1px 1px 1px transparentize(#000, 0.8),
+        -1px -1px 1px transparentize(#000, 0.8);
+    overflow: auto;
+    @media screen and (min-width: 900px) {
+        width: 900px;
+    }
+
+
+    #banner {
+        height: 300px;
+        display: block;
+        position: relative;
+        background: url("../images/sao-promo.jpg");
+        background-size: cover;
+        #titleBar {
+            background: transparentize(#fff, 0.0);
+            box-shadow:
+                0 -1px 1px transparentize(#000, 0.8);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 50px;
+            #title {
+                padding: 6px 0 0 12px;
+                color: #333;
+                font-size: 36px;
+            }
+        }
+    }
+
+    #info {
+        width: 100%;
+        background: #333;
+        float: left;
+        position: relative;
+        #infoData {
+            .infoDatum {
+                padding: 4px 12px;
+                color: #777;
+                font-size: 24px;
+                float: left;
+                clear: left;
+                
+                &:first-of-type {
+                    padding-top: 12px;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 12px;
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover {
+                        text-shadow: 0 0 2px #fff;
+                    }
+                }
+            }
+        }
+        .infoLabel {
+            color: #555;
+            font-size: 12px;
+            float: left;
+        }
+    }
+
+    #mediaPanels {
+        width: 100%;
+        float: left;
+        box-shadow: 0 -1px 2px #000;
+        #testAnimePanel {
+            margin: 12px;
+            width: 360px;
+            height: 80px;
+            position: relative;
+            border-radius: 2px;
+            background: $animeOrange;
+            box-shadow: 
+                1px 1px 1px transparentize(#000, 0.8),
+                -1px 1px 1px transparentize(#000, 0.8),
+                1px -1px 1px transparentize(#000, 0.8),
+                -1px -1px 1px transparentize(#000, 0.8);
+            p {
+                padding: 6px;
+                color: #fff;
+            }
+        }
+    }
 }
 
-nav {
-    margin: 0;
-    background: #f80;
-    width: 30%;
-    height: 100%;
-}
 
-section {
-    background: white;
-    width: 60%;
-}
 
-label {
-    float: left;
-    clear: left;
-}
+/* --------------------------------- */
+/* --------->>> FOOTER <<<---------- */
+/* --------------------------------- */
+footer {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background: #333;
+    width: 100%;
 
-input {
-    float: left;
-}
-
-img {
-    width: 300px;
-    height: 300px;
-    float: left;
-    clear: left;
+    p {
+        width: 100%;
+        padding-top: 12px;
+        color: #fff;
+        text-align: center;
+    }
 }

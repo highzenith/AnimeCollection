@@ -1,0 +1,38 @@
+doctype html
+head
+    link(rel="stylesheet", href="/stylesheets/screen.css")
+    script(src="lib/jquery-1.11.0.js")
+    script(src="collection.js")
+    title Risuto - Organize your interests
+body
+    div#content
+        header  
+            h1 Risuto
+
+        section#main
+            section#banner
+                div#titleBar
+                    h2#title
+
+            section#info
+                div#infoData
+                    h3#demographic.infoDatum 
+                        | a 
+                        a(href='#')
+                    //- h3.infoLabel Demographic
+                    h3#genre.infoDatum
+                        a(href='#')
+                        |  series
+                    //- h3.infoLabel Genre
+                    h3#creator.infoDatum
+                        | by 
+                        a(href='#')
+                    //- h3.infoLabel Creator
+
+            section#mediaPanels
+                div#testAnimePanel
+                    p Anime: Sword Art Online
+
+                div#testMangaPanel
+        footer
+            p This is the footer.
